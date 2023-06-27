@@ -14,23 +14,25 @@ public class FormGame {
         jFrame.setTitle("Mіста");
 
         JTextField fieldPayer = new JTextField();
-        fieldPayer.setBounds(30,30,120,20);
+        fieldPayer.setBounds(30,30,120,30);
         JLabel lablePlayer = new JLabel("Введіть назву міста");
-        lablePlayer.setBounds(160,30, 120, 20);
+        lablePlayer.setBounds(160,30, 120, 30);
 
         JButton jButtonСourse = new JButton("Зробити хід");
-        jButtonСourse.setBounds(30, 60, 120, 20);
+        jButtonСourse.setBounds(30, 70, 120, 30);
         jButtonСourse.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (fieldPayer.getText().equalsIgnoreCase("Здаюсь")) {
-                    JOptionPane.showMessageDialog(jFrame,"Ви здалися");
+                    JOptionPane.showMessageDialog(jFrame,"Ви здалися!");
                 };
             }
         });
 
         JLabel lableComp = new JLabel("Ком'пютер: ");
-        lableComp.setBounds(160,60, 120, 20);
+        lableComp.setBounds(160,75, 120, 20);
+
+
 
 
         jFrame.add(jButtonСourse);

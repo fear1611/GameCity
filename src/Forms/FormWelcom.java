@@ -10,16 +10,23 @@ public class FormWelcom {
     public FormWelcom(){
 
         JFrame jFrame = new JFrame() {};
+
+        try {
+            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
         Image icon = Toolkit.getDefaultToolkit().getImage("city.png");
         jFrame.setIconImage(icon);
         jFrame.setTitle("Вітаємо");
 
         JLabel label = new JLabel("Вітаємо вас у грі дитинства і всіх розумників!");
-        label.setBounds(30,20,400,20);
+        label.setBounds(30,20,400,30);
 
 
         JButton jButtonOK=new JButton("Start");
-        jButtonOK.setBounds(300,20,70, 20);
+        jButtonOK.setBounds(300,20,70, 30);
         jButtonOK.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
